@@ -4,6 +4,7 @@ import axios from 'axios';
 import './App.css'
 import BuyShoes from './components/BuyShoes';
 import ShoesList from './components/ShoesList';
+// import TotalCost from './components/TotalCost'
 
 class App extends React.Component{
 
@@ -13,8 +14,9 @@ class App extends React.Component{
       shoes:[],
       newShoes:[]
     }
-    this.deleteShoes = this.deleteShoes.bind(this)
-    this.addShoes = this.addShoes.bind(this)
+    this.shoesSold = this.shoesSold.bind(this)
+    this.shoesChange = this.shoesChange.bind(this)
+    this.shoesBuy = this.shoesBuy.bind(this)
     this.changeHandler = this.changeHandler.bind(this)
   }
 
@@ -26,16 +28,24 @@ class App extends React.Component{
     })
   }
 
-  deleteShoes = (id) =>{
+  shoesSold = (id) =>{
     axios.delete(`/api/deleteshoes/${id}`).then(res=>{
       this.setState({
         shoes: res.data
       })
     })
   }
+
+  shoesChange = (id,cost,color ) => {
+    axios.put(`/api/updateshoes/${id}`,{cost, color}).then(res=>{
+      this.setState({
+        shoes: res.data
+      })
+    })
+  }
   
-  addShoes(shoestoadd){
-    axios.post(`/api/addShoes`, shoestoadd).then(res=>{
+  shoesBuy(shoestoadd){
+    axios.post(`/api/addshoes`, shoestoadd).then(res=>{
       this.setState({
         shoes: res.data,
       })
@@ -51,9 +61,9 @@ class App extends React.Component{
   render(){
     return(
       <div>
-        <ShoesList shoes={this.state.shoes}/>
-        <BuyShoes newShoes={this.state.newShoes} changeHandler={this.changeHandler} addShoes={this.addShoes}/>
-
+        <ShoesList shoes={this.state.shoes} shoesSold={this.shoesSold} shoesChange={this.shoesChange}/>
+        <BuyShoes newShoes={this.state.newShoes} changeHandler={this.changeHandler} shoesBuy={this.shoesBuy}/>
+        
       </div>
     );
   }

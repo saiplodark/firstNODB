@@ -19,7 +19,8 @@ module.exports={
         const index = shoes.findIndex((elem)=>{
             return elem.id == req.params.id
         })
-        shoes[index] = req.body
+        shoes[index].cost = req.body.cost
+        shoes[index].color = req.body.color
         res.status(200).send(shoes)
     },
     deleteShoes: (req, res, next)=>{

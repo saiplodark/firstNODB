@@ -25,7 +25,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color:rebeccapurple;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +35,19 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Shoestoshow{
+  background-color: violet;
+}
+
+.Shoestoshow > img{
+  width: 500px;
+  height: 500px;
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: stretch;
 }

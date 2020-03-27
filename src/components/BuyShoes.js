@@ -18,22 +18,18 @@ export default class BuyShoes extends React.Component{
         })
       }
 
-    //   changeHandler(e){
-    //     this.setState({
-    //       color: e.target.value
-    //     })
-    //   }
+
 
     render(){
         return(
             <div>
-            <p>id</p>
+            <p>model</p>
             <input
             type ="text"
             name = "id"
             value = {this.state.id}
             onChange = {(e)=> this.changeHandler(e)}
-            placeholder = "Add new item..."
+            placeholder = "New Kicks"
             />
             <p>color</p>
             <input
@@ -41,7 +37,7 @@ export default class BuyShoes extends React.Component{
             name = "color"
             value = {this.state.color}
             onChange = {(e)=> this.changeHandler(e)}
-            placeholder = "Add new item..."
+            placeholder = "Color"
             />
             <p>cost</p>
             <input
@@ -49,7 +45,7 @@ export default class BuyShoes extends React.Component{
             name = "cost"
             value = {this.state.cost}
             onChange = {(e)=> this.changeHandler(e)}
-            placeholder = "Add new item..."
+            placeholder = "How much you spend?"
             />
             <p>img</p>
             <input
@@ -57,9 +53,9 @@ export default class BuyShoes extends React.Component{
             name = "img"
             value = {this.state.img}
             onChange = {(e)=> this.changeHandler(e)}
-            placeholder = "Add new item..."
+            placeholder = ""
             />
-            <button onClick={() => this.props.addShoes(this.state)}>Add Shoes</button>
+            <button onClick={() => this.props.shoesBuy(this.state)}>Add Shoes</button>
         </div>
         )
     }
