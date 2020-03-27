@@ -1,0 +1,26 @@
+[
+    {
+        "id":"boost350",
+        "color":"blk/wht/blk",
+        "cost":238,
+        "img":"https://stockx.imgix.net/Adidas-Yeezy-Boost-350-V2-Core-Black-White.png?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1538080256"
+    },
+    {
+        "id":"boost380",
+        "color":"mist",
+        "cost":249,
+        "img":"https://cdn.shopify.com/s/files/1/0187/5180/products/image_98416c14-f34e-4e9d-bb89-6bad141f32b1_2000x.png?v=1583445135"
+    },
+    {
+        "id":"boost700",
+        "color":"zebra",
+        "cost":325,
+        "img":"https://stockx-360.imgix.net/Adidas-Yeezy-Wave-Runner-700-Solid-Grey/Images/Adidas-Yeezy-Wave-Runner-700-Solid-Grey/Lv2/img01.jpg?auto=format,compress&w=559&q=90&dpr=2&updated_at=1538080256"
+    },
+    {
+        "id":"AJ11",
+        "color":"GammaBlue",
+        "cost":210,
+        "img":"https://stockx.imgix.net/Air-Jordan-11-Retro-Gamma-Blue-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1562619394"
+    }
+]

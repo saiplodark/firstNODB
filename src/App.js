@@ -1,26 +1,62 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import axios from 'axios';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css'
+import BuyShoes from './components/BuyShoes';
+import ShoesList from './components/ShoesList';
+
+class App extends React.Component{
+
+  constructor(){
+    super()
+    this.state={
+      shoes:[],
+      newShoes:[]
+    }
+    this.deleteShoes = this.deleteShoes.bind(this)
+    this.addShoes = this.addShoes.bind(this)
+    this.changeHandler = this.changeHandler.bind(this)
+  }
+
+  componentDidMount(){
+    axios.get('/api/shoes').then(res => {
+      this.setState({
+        shoes: res.data
+      })
+    })
+  }
+
+  deleteShoes = (id) =>{
+    axios.delete(`/api/deleteshoes/${id}`).then(res=>{
+      this.setState({
+        shoes: res.data
+      })
+    })
+  }
+  
+  addShoes(shoestoadd){
+    axios.post(`/api/addShoes`, shoestoadd).then(res=>{
+      this.setState({
+        shoes: res.data,
+      })
+    })
+  }
+  
+  changeHandler(e){
+    this.setState({
+      newShoes: e.target.value
+    })
+  }
+
+  render(){
+    return(
+      <div>
+        <ShoesList shoes={this.state.shoes}/>
+        <BuyShoes newShoes={this.state.newShoes} changeHandler={this.changeHandler} addShoes={this.addShoes}/>
+
+      </div>
+    );
+  }
 }
 
 export default App;
