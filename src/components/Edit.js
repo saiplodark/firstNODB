@@ -23,7 +23,7 @@ export default class Edit extends React.Component{
 
   
     render(){
-    return <div>
+    return <div className = "EditShoeS">
         {this.state.edit? 
         <div>
             <input name = "money" placeholder = "cost" onChange = {this.changeHandler}></input>

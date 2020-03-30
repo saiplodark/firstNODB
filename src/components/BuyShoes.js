@@ -22,7 +22,7 @@ export default class BuyShoes extends React.Component{
 
     render(){
         return(
-            <div>
+            <div className="Buy">
             <p>model</p>
             <input
             type ="text"
@@ -31,6 +31,14 @@ export default class BuyShoes extends React.Component{
             onChange = {(e)=> this.changeHandler(e)}
             placeholder = "New Kicks"
             />
+              <p>cost</p>
+            <input
+            type ="text"
+            name = "cost"
+            value = {this.state.cost}
+            onChange = {(e)=> this.changeHandler(e)}
+            placeholder = "How much you spend?"
+            />
             <p>color</p>
             <input
             type ="text"
@@ -38,14 +46,6 @@ export default class BuyShoes extends React.Component{
             value = {this.state.color}
             onChange = {(e)=> this.changeHandler(e)}
             placeholder = "Color"
-            />
-            <p>cost</p>
-            <input
-            type ="text"
-            name = "cost"
-            value = {this.state.cost}
-            onChange = {(e)=> this.changeHandler(e)}
-            placeholder = "How much you spend?"
             />
             <p>img</p>
             <input

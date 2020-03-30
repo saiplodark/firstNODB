@@ -6,6 +6,7 @@ import BuyShoes from './components/BuyShoes';
 import ShoesList from './components/ShoesList';
 // import TotalCost from './components/TotalCost'
 
+
 class App extends React.Component{
 
   constructor(){
@@ -60,7 +61,8 @@ class App extends React.Component{
 
   render(){
     return(
-      <div>
+      <div className = "Page">
+        <h1>Cory's Kicks</h1>
         <ShoesList shoes={this.state.shoes} shoesSold={this.shoesSold} shoesChange={this.shoesChange}/>
         <BuyShoes newShoes={this.state.newShoes} changeHandler={this.changeHandler} shoesBuy={this.shoesBuy}/>
         
