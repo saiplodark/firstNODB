@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 import './App.css'
+// import './reset.css'
 import BuyShoes from './components/BuyShoes';
 import ShoesList from './components/ShoesList';
 // import TotalCost from './components/TotalCost'

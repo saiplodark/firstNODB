@@ -45,7 +45,7 @@
   }
 } */
 body{
-  background-color: rgb(178, 228, 184);
+  background-color: rgb(225, 241, 227);
 }
 
 .Page{
@@ -56,11 +56,13 @@ body{
   flex-wrap: nowrap;
 	justify-content: center;
   align-items: center;
-  background-color: cornflowerblue;
+  /* background-color: cornflowerblue; */
 }
 
 .Page > h1{
-  color: rgb(178, 228, 184);
+  -webkit-text-fill-color: rgba(147, 220, 229, 0.835);
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 2px;
   font-style: oblique;
   letter-spacing: 10px;
   font-size: 45px;
@@ -80,21 +82,29 @@ body{
 .Shoestoshow > img{
   width: 100%;
   height: 350px;
+  border: rgba(167, 228, 236, 0.835);
+  border-style: ridge;
 
 }
 
 .Shoestoshow > span{
   width: 100%;
-  color:rgba(167, 228, 236, 0.835);
-  font-size: 20px;
-  font-weight: 2000;
+  font-size: 25px;
+  font-weight: bolder;
   font-style: italic;
   display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
-  background-color: coral;
+  /* background-color: coral; */
+  background-color: white;
+  border: rgba(167, 228, 236, 0.835);
+  border-style: groove;
+  -webkit-text-fill-color: rgba(161, 228, 235, 0.924);
+  -webkit-text-stroke-color: seagreen;
+  -webkit-text-stroke-width: 1px;
+  background-color: blanchedalmond;
 }
 
 
@@ -106,7 +116,7 @@ body{
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  background-color: red;
+  /* background-color: red; */
 }
 
 .Buttons > button{
@@ -122,14 +132,22 @@ body{
 }
 
 .Buy{
-  width: 90vw;
-  color: red;
+  width: 80vw;
+  -webkit-text-stroke-color: rgba(168, 133, 233, 0.918);
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-fill-color: rgba(127, 213, 235, 0.911);
   display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: space-evenly;
-	align-items: center;
-background-color: rgba(167, 228, 236, 0.835);
+  align-items: center;
+  border: rgba(245, 154, 202, 0.938);
+  border-style: dotted;
+  border-width: thick;
+  border-radius: 40%;
+  font-size: 20px;
+  font-weight: bolder ;
+  font-style: italic;
 }
 
 .EditShoeS{
@@ -137,7 +155,7 @@ background-color: rgba(167, 228, 236, 0.835);
 }
 
 .ShoesListS{
-  background-color: seagreen;
+  /* background-color: seagreen; */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
