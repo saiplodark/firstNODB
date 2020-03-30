@@ -21,6 +21,7 @@ module.exports={
         })
         shoes[index].cost = req.body.cost
         shoes[index].color = req.body.color
+        shoes[index].img = req.body.img
         res.status(200).send(shoes)
     },
     deleteShoes: (req, res, next)=>{

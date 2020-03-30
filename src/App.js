@@ -37,8 +37,8 @@ class App extends React.Component{
     })
   }
 
-  shoesChange = (id,cost,color ) => {
-    axios.put(`/api/updateshoes/${id}`,{cost, color}).then(res=>{
+  shoesChange = (id,cost,color,img ) => {
+    axios.put(`/api/updateshoes/${id}`,{cost, color, img}).then(res=>{
       this.setState({
         shoes: res.data
       })

@@ -45,7 +45,7 @@
   }
 } */
 body{
-  background-color: black;
+  background-color: rgb(178, 228, 184);
 }
 
 .Page{
@@ -55,12 +55,15 @@ body{
   flex-direction: column;
   flex-wrap: nowrap;
 	justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   background-color: cornflowerblue;
 }
 
 .Page > h1{
-  color: whitesmoke;
+  color: rgb(178, 228, 184);
+  font-style: oblique;
+  letter-spacing: 10px;
+  font-size: 45px;
 }
 
 .Shoestoshow{
@@ -69,11 +72,9 @@ body{
   height: 100%;
   display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: flex-start;
+	flex-wrap: nowrap;
+	justify-content: space-around;
 	align-items: center;
-  align-content: flex-start;
-  background-color: burlywood;
 }
 
 .Shoestoshow > img{
@@ -84,8 +85,10 @@ body{
 
 .Shoestoshow > span{
   width: 100%;
-  /* size: 60px; */
-  color:grey;
+  color:rgba(167, 228, 236, 0.835);
+  font-size: 20px;
+  font-weight: 2000;
+  font-style: italic;
   display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -125,5 +128,9 @@ body{
 	flex-wrap: nowrap;
 	justify-content: space-evenly;
 	align-items: center;
-background-color: cyan;
+background-color: rgba(167, 228, 236, 0.835);
+}
+
+.EditShoeS{
+  display: inline-block;
 }

@@ -8,7 +8,8 @@ export default class Edit extends React.Component{
         this.state = {
             edit: false,
             money: "",
-            look:""
+            look:"",
+            pic:""
       }
       this.changeHandler = this.changeHandler.bind(this)
      }
@@ -28,7 +29,8 @@ export default class Edit extends React.Component{
         <div>
             <input name = "money" placeholder = "cost" onChange = {this.changeHandler}></input>
             <input name = "look" placeholder = "color" onChange = {this.changeHandler}></input>
-            <button onClick = {() => this.props.function(this.props.id, this.state.money, this.state.look)}>Save</button>
+            <input name = "pic" placeholder = "image" onChange = {this.changeHandler}></input>
+            <button onClick = {() => this.props.function(this.props.id, this.state.money, this.state.look, this.state.pic )}>Save</button>
             </div> : null}
   <button onClick={() => {this.setState({edit: !this.state.edit})}}>
     Edit
