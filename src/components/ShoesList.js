@@ -12,7 +12,7 @@ export default function ShoesList(props){
         </div>
     })
 
-    return <div>
+    return <div className="ShoesListS">
         {mappedshoes}
     </div>
 }
